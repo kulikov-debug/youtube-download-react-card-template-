@@ -50,7 +50,7 @@ export const HeaderNav = ({ onClose }: HeaderNavProps) =>{
   }
 
   return (
-    <nav className="w-screen bg-white dark:bg-transparent p-4 lg:min-h-min lg:w-auto lg:p-0">
+    <nav className="w-screen bg-header_bg dark:bg-transparent p-4 lg:min-h-min lg:w-auto lg:p-0">
       <button
         className="block ml-auto lg:hidden" 
         onClick={ onClose? onClose : () =>{} }>

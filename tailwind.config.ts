@@ -10,10 +10,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        body: "#f3f4f6",
+        header_bg: "#FFFFFE",
         purple_main: "#6c5ce7",
         heading_main: "#2D3436",
+        dark_heading_main: "#FFFFFF",
+        base_one: "#4A5455",
+        dark_base_one: "#b8b8b8",
         dark_body: "#121316",
-        dark_heading: "#191a1d"
+        dark_heading: "#191a1d",
+        partner: "#9ca3af"
       },
     },
     fontFamily: {

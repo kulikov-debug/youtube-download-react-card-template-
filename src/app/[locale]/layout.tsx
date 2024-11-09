@@ -32,13 +32,13 @@ const Layout = async({ children, params }: LayoutProps) => {
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
- 
+
   const messages = await getMessages();
 
   return (
       <html suppressHydrationWarning lang={locale}>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.min.js"></Script>
-        <body className={`${ inter_sans } font-inter bg-gray-100 dark:bg-dark_body`}>
+        <body className={`${ inter_sans } font-inter bg-body dark:bg-dark_body`}>
           <ThemeProvider attribute="class">
             <NextIntlClientProvider messages={messages}>
               <Header />

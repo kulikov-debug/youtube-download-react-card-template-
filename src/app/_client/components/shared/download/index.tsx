@@ -3,6 +3,7 @@ import { useRef, useState } from "react"
 import Script from "next/script"
 import { useTranslations } from "next-intl"
 import { DownloadIcon } from "../../svgs/icons/download"
+import { ADS_URL } from "@/app/_client/configs"
 
 
 export const Download = () =>{
@@ -16,7 +17,7 @@ export const Download = () =>{
       <div 
         key={`downloadable-${ index }-${downloadable}`}
         className="mb-10 flex justify-center w-full">
-        <iframe className="lg:w-[650px]" id="cardApiIframe" width="100%" height="100%" style={{border: "none"}} src={`https://loader.to/api/card2/?url=${ downloadable }`}></iframe>
+        <iframe className="lg:w-[650px]" id="cardApiIframe" width="100%" height="100%" style={{border: "none"}} src={`https://loader.to/api/card2/?url=${ downloadable }${ ADS_URL? `&adUrl=${ ADS_URL }`: "" }`}></iframe>
         <Script> {`iFrameResize({ log: false }, '#cardApiIframe')`} </Script>
       </div>
     ))

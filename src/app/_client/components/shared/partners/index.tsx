@@ -49,7 +49,7 @@ export const Partners = () =>{
     const mappedPartners = partners.map(partner => (
       <li 
         key={ partner.key }
-        className="transition-colors text-gray-400 hover:text-purple_main">
+        className="transition-colors text-partner hover:text-purple_main">
         { partner.component }
       </li>
     ))
