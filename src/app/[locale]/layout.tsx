@@ -10,6 +10,8 @@ import { Footer } from "../_client/components/layout/footer";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { ThemeProvider } from "next-themes";
+import Head from "next/head";
+import Script from "next/script";
 
 
 export const metadata: Metadata = {
@@ -35,6 +37,7 @@ const Layout = async({ children, params }: LayoutProps) => {
 
   return (
       <html suppressHydrationWarning lang={locale}>
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.9/iframeResizer.min.js"></Script>
         <body className={`${ inter_sans } font-inter bg-gray-100 dark:bg-dark_body`}>
           <ThemeProvider attribute="class">
             <NextIntlClientProvider messages={messages}>

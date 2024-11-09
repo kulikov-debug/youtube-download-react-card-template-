@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/routing"
 import { useTranslations } from "next-intl"
+import { Languages } from "./languages"
 
 
 const links = [
@@ -59,18 +60,17 @@ export const Footer = () =>{
         <h3 className="text-xl font-bold text-heading_main dark:text-white mb-4">{ translate("more_links") }</h3>
         <ul className="text-gray-500 dark:text-gray-400 lg:grid lg:grid-cols-2 lg:gap-x-10">
           { renderLinks() }
-          <li
+          {/* <li
             className="text-[15px] font-light mb-8">
             <Link href="/contact">
               Contact
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
-      <div className="text-center lg:text-left">
+      <div className="text-center lg:text-left lg:max-w-[45%]">
         <h3 className="text-xl font-bold text-heading_main dark:text-white mb-4">{ translate("languages") }</h3>
-        <ul className="text-gray-500 dark:text-gray-400 lg:grid lg:grid-cols-2 lg:gap-x-10">
-        </ul>
+        <Languages />
       </div>
       <div className="lg:basis-full p-4">
         <div className="border-t-2 pt-16 border-t-gray-200 dark:border-t-gray-800">
